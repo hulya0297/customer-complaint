@@ -1,0 +1,36 @@
+.filterContainer {
+    margin-bottom: 20px;
+
+    &_filterForm {
+        display: flex;
+        align-items: center;
+        &_filterInput {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            flex: 1;
+        }
+        &_filterButton{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        &_filterButton:hover{
+            background-color: #0056b3;
+        }
+    }
+
+    
+
+   
+
+    ;
+
+    
+}
