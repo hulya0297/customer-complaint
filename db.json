@@ -1,0 +1,18 @@
+{"complaints" : [
+    {
+        " id": "1",
+        "title": "Complaint",
+        "name": "Hulya Azizova",
+        "email": "azizovahulya12@gmail.com",
+        "phone": "+9940516250297",
+        "address": "Baku",
+        "submissionDate": "new Date().toISOString()",
+        "status": "Open",
+        "feedback": "",
+        "priority": "Medium"
+    
+
+    }
+]
+  
+}

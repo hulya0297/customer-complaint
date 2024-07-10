@@ -72,16 +72,17 @@
 // });
 
 import express from 'express';
-import { json } from 'body-parser';
-import cors from 'cors';
-import { v4 as uuidv4 } from 'uuid'; 
+import pkg from 'body-parser';
+const { json } = pkg;
+import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
+
 app.use(json());
-app.use(cors());
+
 
 let complaints = []; 
-app.post('http://localhost:5000/api/complaints', (req, res) => {
+app.post('http://localhost:5000/complaints', (req, res) => {
   const { title, name, email, phone, address, rating } = req.body;
   const newComplaint = {
     id: uuidv4(),
@@ -99,12 +100,12 @@ app.post('http://localhost:5000/api/complaints', (req, res) => {
 });
 
 
-app.get('http://localhost:5000/api/complaints', (req, res) => {
+app.get('http://localhost:5000/complaints', (req, res) => {
   res.json(complaints);
 });
 
 
-app.put('http://localhost:5000/api/complaints/:id', (req, res) => {
+app.put('http://localhost:5000/complaints/:id', (req, res) => {
   const { id } = req.params;
   const { response } = req.body;
   const complaintIndex = complaints.findIndex(c => c.id === id);

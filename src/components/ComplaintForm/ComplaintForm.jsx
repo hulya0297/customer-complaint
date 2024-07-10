@@ -29,7 +29,7 @@ function ComplaintForm() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/complaints",
+        "http://localhost:5000/complaints",
         formData
       );
       console.log("Complaint submitted successfully:", response.data);
